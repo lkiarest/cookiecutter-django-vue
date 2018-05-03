@@ -1,0 +1,5 @@
+django
+pytz
+djangorestframework
+django-filter
+raven

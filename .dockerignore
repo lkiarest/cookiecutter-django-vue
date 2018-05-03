@@ -1,0 +1,7 @@
+fe-res
+README.md
+yarn.lock
+logs/run.log*
+.idea
+media
+static
