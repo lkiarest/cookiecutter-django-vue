@@ -1,7 +1,3 @@
-# config
-
-Config raven dsn in 'settings.py' and 'fe/src/conf/raven.conf.js' if use raven
-
 # start
 
 ./start.sh

@@ -1,0 +1,7 @@
+django
+pytz
+djangorestframework
+django-filter
+{% if cookiecutter.use_sentry == 'y' -%}
+raven
+{%- endif %}
