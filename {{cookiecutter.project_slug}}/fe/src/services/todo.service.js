@@ -11,7 +11,7 @@ const serialize = (item) => {
 }
 
 export const getTodos = () => {
-  return http.get('/todos').then(result => {
+  return http.get('/todos/').then(result => {
     return result ? result.map(item => serialize(item)) : []
   })
 }
@@ -28,7 +28,7 @@ export const saveTodo = (params) => {
   if (params.id) {
     return http.put(`/todos/${params.id}`, params).then(serialize)
   } else {
-    return http.post('/todos', params).then(serialize)
+    return http.post('/todos/', params).then(serialize)
   }
 }
 

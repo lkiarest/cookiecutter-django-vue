@@ -20,15 +20,15 @@ from django.views.static import serve
 from django.views.generic import TemplateView
 from . import install
 
+
+from django.conf import settings
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='index.html')),
     path('api/todos/', include('todo.urls')),
     path('admin/', admin.site.urls),
     path('install/', install.init),
     path('migrate/', install.migrate),
+    path('', TemplateView.as_view(template_name='index.html')),
 ]
-
-from django.conf import settings
 if settings.DEBUG is False:
     urlpatterns += [ url(r'^static/(?P<path>.*)$', serve, { 'document_root': settings.STATIC_ROOT }), ]
 
