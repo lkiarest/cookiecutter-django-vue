@@ -3,7 +3,4 @@ __pycache__
 run.log*
 node_modules
 .idea
-static-collect
-media
-settings.py
 *.sqlite3
